@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Joke</title>
+</head>
+<body>
+    <div class="div">
+        <% if (locals.content) { %> 
+            <div class="content">
+                <p><%= content %></p>
+                <p><%= rest %></p>
+            </div>
+            <form method="post"><button formaction="/" type="submit">gimme more</button></form>
+        <% } else { %>
+            <form method="post"><button formaction="/" type="submit">make me laugh</button></form>
+        <% } %> 
+    </div>
+    
+</body>
+</html>
